@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2c5364, #0f2027, #2c5364, #3d819e);
+    background-attachment: fixed;
+    color: #222;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background: linear-gradient(45deg, #2c5364, #0f2027, #3d819e);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    margin-top: 100px;
+    min-height: 50vh;
+    padding-top: 120px; /* navbar height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("lap.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+h1,p{
+     margin-right: 55%;
+}
+
+
+.hero img {
+    margin-right: 55%;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #CCD0CF;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+/* SKILLS */
+.skill-box span {
+    display: inline-block;
+    background: linear-gradient(45deg,#0f2027,  #3d819e);
+    color: white;
+    padding: 8px 16px;
+    margin: 6px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+/* PROJECTS */
+.project {
+    background: #fff;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #E1306C;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+
+/* CONTACT */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background: #0f2027;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(45deg,#0f2027, #2c5364,  #3d819e);
+    color: white;
+}
+
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+/* DARK MODE */
+.dark {
+    background: #0f0f0f;
+    color: white;
+}
+
+.dark section {
+    background: #1c1c1c;
+}
+
+.dark nav,
+.dark footer {
+    background: linear-gradient(45deg, #833AB4, #E1306C);
+}
+
+
+#darkToggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
